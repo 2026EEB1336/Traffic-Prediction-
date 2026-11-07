@@ -57,3 +57,11 @@ def congestion_alert(junction, date_time):
 
 
 print("Alert system functions are ready!")
+
+
+
+
+#single alerts
+congestion_alert(1, "2017-07-03 08:00:00")    
+congestion_alert(1, "2017-07-02 03:00:00")    
+congestion_alert(2, "2017-07-05 18:00:00") 
