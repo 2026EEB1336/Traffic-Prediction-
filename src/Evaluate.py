@@ -29,3 +29,7 @@ f1 = f1_score(y_test, y_pred)
 print("Precision:", round(precision, 4))
 print("Recall   :", round(recall, 4))
 print("F1-score :", round(f1, 4))
+
+
+#classification report
+print(classification_report(y_test, y_pred, target_names=["Normal (0)", "Congested (1)"]))
