@@ -20,3 +20,11 @@ sns.heatmap(cm, annot=True, fmt="d", cmap="Blues",
             yticklabels=["Actual Normal", "Actual Congested"])
 plt.title("Confusion Matrix")
 plt.show()
+#Precision , Recall, F1-score
+precision = precision_score(y_test, y_pred)
+recall = recall_score(y_test, y_pred)
+f1 = f1_score(y_test, y_pred)
+
+print("Precision:", round(precision, 4))
+print("Recall   :", round(recall, 4))
+print("F1-score :", round(f1, 4))
