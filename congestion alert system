@@ -65,3 +65,20 @@ print("Alert system functions are ready!")
 congestion_alert(1, "2017-07-03 08:00:00")    
 congestion_alert(1, "2017-07-02 03:00:00")    
 congestion_alert(2, "2017-07-05 18:00:00") 
+
+
+
+#Alert Board
+check_time = "2017-07-03 18:00:00"
+print("ALERT BOARD for", check_time)
+print("-" * 45)
+
+for j in thresholds:
+    prob = predict_congestion_probability(j, check_time)
+    print(f"Junction {j}:  {prob * 100:5.1f}%   {get_alert_level(prob)}")
+
+
+
+
+
+
