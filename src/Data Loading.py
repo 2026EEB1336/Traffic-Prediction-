@@ -64,3 +64,39 @@ print()
 print(df.head())
 print()
 df.info()
+
+#Average traffic at each junction
+plt.figure(figsize=(7, 4))
+sns.barplot(data=df, x="Junction", y="Vehicles", errorbar=None)
+plt.xlabel("Junction")
+plt.ylabel("Average Vehicles per Hour")
+plt.title("Average Traffic at Each Junction")
+plt.show()
+
+#Traffic during the day
+plt.figure(figsize=(10, 5))
+sns.lineplot(data=df, x="Hour", y="Vehicles", hue=df["Junction"].astype(str), errorbar=None)
+plt.xlabel("Hour of the Day (0 - 23)")
+plt.ylabel("Average Vehicles")
+plt.title("Average Traffic by Hour of the Day")
+plt.xticks(range(0, 24))
+plt.legend(title="Junction")
+plt.grid(alpha=0.25)
+plt.show()
+
+#Traffic on different days of week
+plt.figure(figsize=(8, 4))
+sns.barplot(data=df, x="DayOfWeek", y="Vehicles", errorbar=None)
+plt.xticks(range(7), ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"])
+plt.xlabel("Day of the Week")
+plt.ylabel("Average Vehicles per Hour")
+plt.title("Average Traffic by Day of the Week")
+plt.show()
+
+#Distribution of the number of vehicles
+plt.figure(figsize=(8, 4))
+plt.hist(df["Vehicles"], bins=30, edgecolor="black")
+plt.xlabel("Vehicles per Hour")
+plt.ylabel("Number of Readings")
+plt.title("Distribution of Vehicles per Hour")
+plt.show()
