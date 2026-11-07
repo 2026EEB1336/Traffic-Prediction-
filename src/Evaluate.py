@@ -31,3 +31,20 @@ print("F1-score :", round(f1, 4))
 
 #classification report
 print(classification_report(y_test, y_pred, target_names=["Normal (0)", "Congested (1)"]))
+
+#Actual vs Predicted class counts
+actual_counts = y_test.value_counts().sort_index()
+predicted_counts = pd.Series(y_pred).value_counts().sort_index()
+
+x = np.arange(2)
+width = 0.35
+
+plt.bar(x - width / 2, actual_counts, width, label="Actual")
+plt.bar(x + width / 2, predicted_counts, width, label="Predicted")
+
+plt.xticks(x, ["Normal (0)", "Congested (1)"])
+plt.xlabel("Class")
+plt.ylabel("Number of Hours")
+plt.title("Actual vs Predicted Class Counts")
+plt.legend()
+plt.show()
