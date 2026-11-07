@@ -65,38 +65,55 @@ print(df.head())
 print()
 df.info()
 
-#Average traffic at each junction
-plt.figure(figsize=(7, 4))
-sns.barplot(data=df, x="Junction", y="Vehicles", errorbar=None)
-plt.xlabel("Junction")
-plt.ylabel("Average Vehicles per Hour")
-plt.title("Average Traffic at Each Junction")
+junction_avg = df.groupby("Junction")["Vehicles"].mean().reset_index()
+plt.figure(figsize=(8, 5))
+sns.barplot(data=junction_avg, x="Junction", y="Vehicles", color="skyblue")
+plt.xlabel("Junction Number")
+plt.ylabel("Mean Vehicle Count")
+plt.title("Comparison of Average Traffic Across Junctions")
 plt.show()
 
-#Traffic during the day
+hourly_avg = df.groupby(["Hour", "Junction"])["Vehicles"].mean().reset_index()
+
+
 plt.figure(figsize=(10, 5))
-sns.lineplot(data=df, x="Hour", y="Vehicles", hue=df["Junction"].astype(str), errorbar=None)
-plt.xlabel("Hour of the Day (0 - 23)")
-plt.ylabel("Average Vehicles")
-plt.title("Average Traffic by Hour of the Day")
-plt.xticks(range(0, 24))
-plt.legend(title="Junction")
-plt.grid(alpha=0.25)
+sns.lineplot(
+    data=hourly_avg,
+    x="Hour",
+    y="Vehicles",
+    hue="Junction",
+    marker="o"
+)
+
+plt.xlabel("Time (Hours)")
+plt.ylabel("Mean Number of Vehicles")
+plt.title("Hourly Traffic Pattern at Different Junctions")
+plt.xticks(range(24))
+plt.grid(True, linestyle="--", alpha=0.4)
+plt.legend(title="Junction ID")
 plt.show()
 
-#Traffic on different days of week
-plt.figure(figsize=(8, 4))
-sns.barplot(data=df, x="DayOfWeek", y="Vehicles", errorbar=None)
+daily_avg = df.groupby("DayOfWeek")["Vehicles"].mean().reset_index()
+
+plt.figure(figsize=(8, 5))
+sns.barplot(data=daily_avg, x="DayOfWeek", y="Vehicles", color="cornflowerblue")
+
 plt.xticks(range(7), ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"])
-plt.xlabel("Day of the Week")
-plt.ylabel("Average Vehicles per Hour")
-plt.title("Average Traffic by Day of the Week")
+plt.xlabel("Days of the Week")
+plt.ylabel("Mean Vehicle Count")
+plt.title("Weekly Traffic Comparison")
 plt.show()
 
-#Distribution of the number of vehicles
-plt.figure(figsize=(8, 4))
-plt.hist(df["Vehicles"], bins=30, edgecolor="black")
-plt.xlabel("Vehicles per Hour")
-plt.ylabel("Number of Readings")
-plt.title("Distribution of Vehicles per Hour")
+
+plt.figure(figsize=(9, 5))
+
+plt.hist(df["Vehicles"], bins=25, color="skyblue",
+         edgecolor="darkblue", alpha=0.8)
+
+plt.xlabel("Number of Vehicles per Hour")
+plt.ylabel("Frequency")
+plt.title("Distribution of Hourly Vehicle Counts")
+
+plt.grid(axis="y", alpha=0.3)
 plt.show()
+
