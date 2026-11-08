@@ -13,3 +13,6 @@ for j in sorted(df["Junction"].unique()):
 
     print(f"Junction {j}: congestion if more than {limit} vehicles per hour")
 
+print()
+print("Count of each class:")
+print(df["Congestion"].value_counts().sort_index()
