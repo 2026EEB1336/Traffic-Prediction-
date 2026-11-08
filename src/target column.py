@@ -16,3 +16,6 @@ for j in sorted(df["Junction"].unique()):
 print()
 print("Count of each class:")
 print(df["Congestion"].value_counts().sort_index())
+
+print()
+print(f"Percentage of congested hours:{round(df["Congestion"].mean() * 100, 2)}%")
