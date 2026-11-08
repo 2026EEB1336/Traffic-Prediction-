@@ -15,4 +15,4 @@ for j in sorted(df["Junction"].unique()):
 
 print()
 print("Count of each class:")
-print(df["Congestion"].value_counts().sort_index()
+print(df["Congestion"].value_counts().sort_index())
