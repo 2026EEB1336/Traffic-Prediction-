@@ -1,0 +1,12 @@
+#showing coefficients
+
+coefficients = pd.Series(model.coef_[0], index=X.columns).sort_values()
+
+print("10 columns that INCREASE the chance of congestion the most:")
+print(coefficients.tail(10)[::-1])
+
+print()
+print("10 columns that DECREASE the chance of congestion the most:")
+print(coefficients.head(10))
+
+
