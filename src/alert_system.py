@@ -35,12 +35,12 @@ def predict_congestion_probability(junction, date_time):
 def get_alert_level(probability):
 
     if probability >= HIGH_LIMIT:
-        return "🔴 HIGH"
+        return "HIGH"
 
     if probability >= MODERATE_LIMIT:
-        return "🟡 MODERATE"
+        return "MODERATE"
 
-    return "🟢 LOW"
+    return "LOW"
 
 
 def congestion_alert(junction, date_time):
