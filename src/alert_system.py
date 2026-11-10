@@ -84,7 +84,7 @@ for junction in sorted(thresholds.keys()):
 print("Alert board generated successfully!")
 
 junction_to_check = 1
-date_to_check = "2017-07-03"  
+selected_date = "2017-07-03"  
 
 hours = []
 probabilities = []
