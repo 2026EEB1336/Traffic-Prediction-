@@ -1,4 +1,4 @@
-feature_columns = ["Junction","Hour",'DayOfWeek","Month"]
+feature_columns = ["Junction","Hour","DayOfWeek","Month"]
 X = pd.get_dummies(df[feature_columns], columns=feature_columns, drop_first=True, dtype=int)
 y = df["Congestion"]
 print("Shape of X:", X.shape)
