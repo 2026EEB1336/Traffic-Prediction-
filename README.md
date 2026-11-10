@@ -103,11 +103,11 @@ ALERT LEVEL          : <HIGH / MODERATE / LOW>
 =======================================================
 ```
 
-[Traffic by hour of the day](doc/Traffic%20by%20hour.png)
-[Confusion matrix](doc/Confusion%20Matrix.png)
-[24-hour congestion forecast](doc/Congession%20forecast.png)
-[Alert output in the terminal](doc/Alert%20Output.png)
-[Traffic by year](doc/Yearly%20Traffic.png)
+![Traffic by hour of the day](doc/Traffic%20by%20hour.png)
+![Confusion matrix](doc/Confusion%20Matrix.png)
+![24-hour congestion forecast](doc/Congession%20forecast.png)
+![Alert output in the terminal](doc/Alert%20Output.png)
+![Traffic by year](doc/Yearly%20Traffic.png)
 
 ---
 
