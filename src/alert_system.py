@@ -102,14 +102,6 @@ for hour in range(24):
     probabilities.append(probability)
     alert_levels.append(alert)
 
-    #if probability >= HIGH_LIMIT:
-    #    alert_colors.append("red")
-    #elif probability >= MODERATE_LIMIT:
-    #   alert_colors.append("orange")
-    #else:
-    #   alert_colors.append("green")
-
-
 forecast_data = pd.DataFrame({
     "Hour": hours,
     "Probability (%)": [round(value * 100, 1) for value in probabilities],
@@ -117,10 +109,7 @@ forecast_data = pd.DataFrame({
 })
 
 print(forecast_data)
-#colors = [
-    #"red" if p >= HIGH_LIMIT else "orange" if p >= MODERATE_LIMIT else "green"
-    #for p in probabilities
-#]
+
 plt.figure(figsize=(11, 5))
 plt.bar(hours, probabilities)
 plt.axhline(HIGH_LIMIT, linestyle="--", label="HIGH limit (70%)")
