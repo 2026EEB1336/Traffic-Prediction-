@@ -128,7 +128,7 @@ plt.axhline(MODERATE_LIMIT, linestyle="--", color="orange", label="MODERATE limi
 plt.xticks(range(24))
 plt.xlabel("Hour of the Day")
 plt.ylabel("Probability of Congestion")
-plt.title(f"Congestion Forecast for Junction {junction_to_check} on {date_to_check}")
+plt.title(f"Congestion Forecast for Junction {junction_to_check} on {selected_date}")
 plt.legend()
 plt.show()
 
