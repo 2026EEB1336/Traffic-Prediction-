@@ -18,7 +18,7 @@ def predict_congestion_probability(junction, date_time):
     features = {
         "Junction_" + str(junction),
         "Hour_" + str(timestamp.hour),
-        "DayOfWeek_" + str(timestamp.dayofweek),
+        "DayOfWeek_" + str(timestamp.day_of_week),
         "Month_" + str(timestamp.month)
     }
 
