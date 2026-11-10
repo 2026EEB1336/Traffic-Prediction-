@@ -81,7 +81,7 @@ print("=" * 50)
 for junction in sorted(thresholds.keys()):
     congestion_alert(junction, check_time)
 
-print("Alert board generated successfully!"
+print("Alert board generated successfully!")
 
 junction = 1
 selected_date = "2017-07-03"
