@@ -35,7 +35,17 @@ Each member's contributions are visible in the commit history.
 
 ```
 /
-├── src                           # The whole project code
+├── src/                                    
+│   ├── main.py                              # runs every step in order
+│   ├── data_loading.py                      # loads the data, explores it, cleans it and plots graphs
+│   ├── target_column.py                     # creates the Congestion column (1 = congested, 0 = normal)
+│   ├── input_features.py                    # builds the input features (junction, hour, day, month)
+│   ├── split.py                             # splits the data into training and test sets
+│   ├── feature_scale.py                     # scales the features
+│   ├── training.py                          # trains the Logistic Regression model and predicts
+│   ├── evaluation.py                        # accuracy, confusion matrix, precision, recall, F1
+│   ├── change_in_chance_of_congestion.py    # shows what the model learned (coefficients)
+│   └── alert_system.py                      # gives a congestion alert for a junction and time                           
 ├── requirements.txt              # libraries to install
 ├── data/
 │   ├── README.md                 # where the dataset goes and which columns it needs
