@@ -63,7 +63,7 @@ Each member's contributions are visible in the commit history.
 
 ## Setup
 
-Tested on **Python 3.14.6 (Windows)** with pandas 3.0.2, numpy 2.4.4, matplotlib 3.10.8, seaborn 0.13.2 and scikit-learn 1.8.0. Python 3.9 or newer is required, and seaborn 0.12 or newer.
+Tested on Python 3.14.7 (macOS) with numpy 2.5.4, pandas 3.0.6, scikit-learn 1.9.1, matplotlib 3.11.2 and seaborn 0.13.2. `requirements.txt` sets minimum versions (numpy 1.26.4, pandas 2.2.2, scikit-learn 1.5.2, matplotlib 3.9.2, seaborn 0.13.2), so Python 3.9 or newer works.
 
 ```bash
 cd ~/Desktop
