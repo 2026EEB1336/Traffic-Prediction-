@@ -122,7 +122,7 @@ print(forecast_data)
     #for p in probabilities
 #]
 plt.figure(figsize=(11, 5))
-plt.bar(hours, probabilities, color=colors)
+plt.bar(hours, probabilities)
 plt.axhline(HIGH_LIMIT, linestyle="--", label="HIGH limit (70%)")
 plt.axhline(MODERATE_LIMIT, linestyle="--", label="MODERATE limit (40%)")
 plt.xticks(range(24))
