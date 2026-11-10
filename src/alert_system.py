@@ -117,7 +117,10 @@ forecast_data = pd.DataFrame({
 })
 
 print(forecast_data)
-
+colors = [
+    "red" if p >= HIGH_LIMIT else "orange" if p >= MODERATE_LIMIT else "green"
+    for p in probabilities
+]
 plt.figure(figsize=(11, 5))
 plt.bar(hours, probabilities, color=colors)
 plt.axhline(HIGH_LIMIT, linestyle="--", color="red", label="HIGH limit (70%)")
