@@ -11,7 +11,7 @@ print(coefficients.head(10))
 
 
   #plotting about coefficients
-  top_positive = coefficients.tail(10)
+top_positive = coefficients.tail(10)
 
 plt.figure(figsize=(8, 5))
 plt.barh(top_positive.index, top_positive.values)
