@@ -16,7 +16,7 @@ from sklearn.metrics import (
 )
 print("Libraries imported successfully!")
 
-df = pd.read_csv("Traffic.csv")
+df = pd.read_csv("data/Traffic.csv")
 print("Dataset shape (rows, columns):", df.shape)
 print()
 print("First 5 rows:")
