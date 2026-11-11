@@ -121,10 +121,11 @@ Run this from the project folder (`Traffic-Prediction-`):
 ```bash
 python src/main.py
 ```
-
+when asked, type 
+```
 ##Enter junction number (1-4): 1
 Enter date and time (example: 2017-07-03 08:00): 2017-07-03 08:00
-
+```
 ## Expected output
 
 The script prints, in this order:
