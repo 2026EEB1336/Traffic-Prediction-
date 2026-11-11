@@ -75,10 +75,12 @@ All commands below are typed in a **terminal**, one block at a time. Press Enter
 
 ```bash
 git clone https://github.com/2026EEB1336/Traffic-Prediction-.git
+```
+### 2. Open the project folder 
+```bash
 cd Traffic-Prediction-
 ```
-
-### 2. Create a virtual environment (in the terminal)
+### 3. Create a virtual environment (in the terminal)
 
 - **Windows:**
 
@@ -92,7 +94,7 @@ python -m venv venv
 python3 -m venv venv
 ```
 
-### 3. Activate the virtual environment (in the terminal)
+### 4. Activate the virtual environment (in the terminal)
 
 - **Windows (Command Prompt):**
 
@@ -108,13 +110,13 @@ source venv/bin/activate
 
 `(venv)` now appears at the start of the terminal line.
 
-### 4. Install the libraries (in the terminal)
+### 5. Install the libraries (in the terminal)
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 5. Run the project (in the terminal)
+### 6. Run the project (in the terminal)
 
 Run this from the project folder (`Traffic-Prediction-`):
 
