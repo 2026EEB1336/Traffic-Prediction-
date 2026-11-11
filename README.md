@@ -136,7 +136,8 @@ The script prints, in this order:
 - an alert message in this format:
 
 
-```=======================================================
+```
+=======================================================
 Junction : 1
 Time     : Monday, 03 July 2017, 08:00
 Chance of congestion : <xx.x>%
