@@ -69,9 +69,7 @@ All commands below are typed in a **terminal**, one block at a time. Press Enter
 
 ### 0. Open a terminal
 
-- **Windows:** press the Windows key, type `cmd`, and press Enter (Command Prompt).
-- **macOS:** press Cmd + Space, type `Terminal`, and press Enter.
-- **Linux:** open the **Terminal** app.
+
 
 ### 1. Clone the repository (in the terminal)
 
