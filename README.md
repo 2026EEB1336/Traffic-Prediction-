@@ -97,7 +97,7 @@ python3 -m venv venv
 - **Windows (Command Prompt):**
 
 ```bash
-venv\Scripts\activate
+venv\Scripts\Activate.ps1
 ```
 
 - **macOS / Linux:**
