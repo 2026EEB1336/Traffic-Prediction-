@@ -124,8 +124,9 @@ Run this from the project folder (`Traffic-Prediction-`):
 python src/main.py
 ```
 
+```
 Enter junction number (1-4): 1
-Enter date and time
+Enter
 
 ## Expected output
 
