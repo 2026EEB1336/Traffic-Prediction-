@@ -123,7 +123,7 @@ python src/main.py
 ```
 when asked, type 
 ```
-##Enter junction number (1-4): 1
+Enter junction number (1-4): 1
 Enter date and time (example: 2017-07-03 08:00): 2017-07-03 08:00
 ```
 ## Expected output
@@ -136,7 +136,7 @@ The script prints, in this order:
 - an alert message in this format:
 
 
-=======================================================
+```=======================================================
 Junction : 1
 Time     : Monday, 03 July 2017, 08:00
 Chance of congestion : <xx.x>%
