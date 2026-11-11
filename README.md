@@ -124,7 +124,7 @@ python src/main.py
 
 Enter junction number (1-4): 1
 Enter date and time (example: 2017-07-03 08:00): 2017-07-03 08:00
-
+```
 ## Expected output
 
 The script prints, in this order:
