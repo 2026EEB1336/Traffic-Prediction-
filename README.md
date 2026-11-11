@@ -122,9 +122,8 @@ Run this from the project folder (`Traffic-Prediction-`):
 python src/main.py
 ```
 
-```
 Enter junction number (1-4): 1
-Enter
+Enter date and time (example: 2017-07-03 08:00): 2017-07-03 08:00
 
 ## Expected output
 
@@ -135,7 +134,7 @@ The script prints, in this order:
 - the model's accuracy next to a "lazy" baseline, then the confusion matrix, precision, recall and F1-score
 - an alert message in this format:
 
-```
+
 =======================================================
 Junction : 1
 Time     : Monday, 03 July 2017, 08:00
