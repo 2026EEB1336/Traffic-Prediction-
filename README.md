@@ -159,7 +159,7 @@ ALERT LEVEL          : <HIGH / MODERATE / LOW>
 ## Links
 
 - Slides: [https://github.com/2026EEB1336/Traffic-Prediction-/blob/main/presentation/Traffic_Prediction_ppt_n.pdf]
-- Video: []
+- Video: [https://drive.google.com/file/d/1gGOTSnl4XpBGfAnyCZAHuivP-ZU8B6tV/view?usp=drive_link]
 
 **Limitations:** congestion is defined relative to each junction's own traffic; the model knows only the calendar (no weather, accidents or holidays); it does not use the previous hour's traffic.
 
