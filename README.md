@@ -61,38 +61,71 @@ Each member's contributions are visible in the commit history.
 
 ---
 
-## Setup
+## Setup & Installation
 
-Tested on Python 3.14.7 (macOS) with numpy 2.5.4, pandas 3.0.6, scikit-learn 1.9.1, matplotlib 3.11.2 and seaborn 0.13.2. `requirements.txt` sets minimum versions (numpy 1.26.4, pandas 2.2.2, scikit-learn 1.5.2, matplotlib 3.9.2, seaborn 0.13.2), so Python 3.9 or newer works.
+Tested on Python 3.14.7 (macOS) with numpy 2.5.4, pandas 3.1.1, scikit-learn 1.9.1, matplotlib 3.11.2 and seaborn 0.13.2. `requirements.txt` sets minimum versions, so other recent Python versions should also work, but we have not tested them. Git and Python 3 must be installed.
+
+All commands below are typed in a **terminal**, one block at a time. Press Enter after each line.
+
+### 0. Open a terminal
+
+- **Windows:** press the Windows key, type `cmd`, and press Enter (Command Prompt).
+- **macOS:** press Cmd + Space, type `Terminal`, and press Enter.
+- **Linux:** open the **Terminal** app.
+
+### 1. Clone the repository (in the terminal)
 
 ```bash
-cd ~/Desktop
 git clone https://github.com/2026EEB1336/Traffic-Prediction-.git
 cd Traffic-Prediction-
+```
+
+### 2. Create a virtual environment (in the terminal)
+
+- **Windows:**
+
+```bash
+python -m venv venv
+```
+
+- **macOS / Linux:**
+
+```bash
 python3 -m venv venv
+```
+
+### 3. Activate the virtual environment (in the terminal)
+
+- **Windows (Command Prompt):**
+
+```bash
+venv\Scripts\activate
+```
+
+- **macOS / Linux:**
+
+```bash
 source venv/bin/activate
+```
+
+`(venv)` now appears at the start of the terminal line.
+
+### 4. Install the libraries (in the terminal)
+
+```bash
 pip install -r requirements.txt
+```
+
+### 5. Run the project (in the terminal)
+
+Run this from the project folder (`Traffic-Prediction-`):
+
+```bash
 python src/main.py
 ```
 
----
-
-## How to run
-
-1. Open a terminal **in the project folder** (so `data/Traffic.csv` is found).
-2. Run:
-   ```bash
-   python src/main.py
-   ```
-3. The script prints the results of each step and opens **9 graphs**, one at a time. **Close each graph window to continue.**
-4. At the end, the script asks for a junction and a time. Type, for example:
-   ```
-   Enter junction number (1-4): 1
-   Enter date and time (example: 2017-07-03 08:00): 2017-07-03 08:00
-   ```
-5. Expected runtime: the calculations take a few seconds (about 3 seconds in our test with no graph windows open). The script waits each time a graph window is open.
-
----
+Enter junction number (1-4): 1
+Enter date and time
 
 ## Expected output
 
