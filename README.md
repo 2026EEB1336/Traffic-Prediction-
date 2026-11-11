@@ -132,9 +132,10 @@ ALERT LEVEL          : <HIGH / MODERATE / LOW>
 
 ## AI-use disclosure
 
-Claude was used for debugging assistance and documentation support.
-It helped us debug a PermissionError when loading the dataset, which was caused by traffic.csv being a folder instead of a file.
-It was used to help us include photos in the documents and give commands, to run the code after the project was completed. 
-It helped us connect all the files together and run from a single file main.py using exec(open("file”).read()).
-Some functions, attributes and methods like pd.to_datetime(), .dt.hour, .dt.dayofweek, .dt.month, quantile(0.75),
-Building a one-row table with pd.DataFrame(0, index=[0], columns=X.columns), plus strftime, plt.axhline was used in the code that was explained by claude for the proper functioning of the project. 
+- Claude: Helped us debug a PermissionError when loading the dataset, which was caused by traffic.csv being a folder instead of a file.
+- Claude: First draft of this README; edited by Bhawishya 
+- Claude: It helped us connect all the files together and run from a single file main.py using exec(open("file”).read()).
+- Claude: Some functions, attributes and methods like pd.to_datetime(), .dt.hour, .dt.dayofweek, .dt.month, quantile(0.75), building a one-row table with
+          pd.DataFrame(0, index=[0], columns=X.columns), plus strftime, plt.axhline was used in the code that was explained by claude for the proper functioning
+          of the project.
+- No AI was used to generate the dataset or the results.
